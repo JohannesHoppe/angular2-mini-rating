@@ -44,6 +44,28 @@ barrels.forEach((barrelName: string) => {
 
 cliSystemConfigPackages['@angular2-material/core']
   = { format: 'cjs', defaultExtenstion: 'js', main: 'core.js' };
+
+const materialPkgs:string[] = [
+  'button',
+  'card',
+  'checkbox',
+  'grid-list',
+  'icon',
+  'input',
+  'list',
+  'progress-bar',
+  'progress-circle',
+  'radio',
+  'sidenav',
+  'slide-toggle',
+  'tabs',
+  'toolbar'
+];
+
+materialPkgs.forEach((pkg) => {
+  cliSystemConfigPackages[`@angular2-material/${pkg}`] = { format: 'cjs', defaultExtenstion: 'js', main: `${pkg}.js`};
+});
+  
  
 
 /** Type declaration for ambient System. */
