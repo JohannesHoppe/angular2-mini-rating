@@ -3,8 +3,18 @@
 </md-toolbar>
 
 <div style="padding: 7px">
-  <button md-button>Basic Button</button>
-  <button md-raised-button>Raised Button</button>
+  
+  <md-content>
 
-  <md-slide-toggle>Slide Toggle</md-slide-toggle>
+      <md-list>
+        <md-list-item class="md-3-line  md-long-text" *ngFor="let book of books; let index = index" style="margin-top: 20px;">
+          <img [src]="book.thumbnails[0].url" class="md-avatar" width="50" />
+          <div class="md-list-item-text" >
+            <h3>{{ book.title }}</h3>
+            <p>{{ book.description }}</p>
+          </div>
+        </md-list-item>
+      </md-list>
+
+  </md-content>
 </div>
